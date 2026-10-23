@@ -1,0 +1,34 @@
+; Engine configuration file.
+; Antler Mayhem — Prototype 001
+config_version=5
+
+[application]
+
+config/name="Antler Mayhem"
+config/description="Grab. Swing. Smash. Regret nothing. — Prototype 001"
+run/main_scene="res://scenes/app/app.tscn"
+config/features=PackedStringArray("4.3")
+
+[autoload]
+
+Sfx="*res://scripts/audio/sfx.gd"
+Progress="*res://scripts/core/progress.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/handheld/orientation=0
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.129, 0.086, 0.157, 1)

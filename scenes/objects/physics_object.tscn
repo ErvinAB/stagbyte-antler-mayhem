@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bantlerprop001"]
+
+[ext_resource type="Script" path="res://scripts/objects/physics_object.gd" id="1_prop"]
+
+[node name="PhysicsObject" type="RigidBody2D"]
+mass = 1.0
+linear_damp = 0.15
+angular_damp = 0.6
+contact_monitor = true
+max_contacts_reported = 6
+script = ExtResource("1_prop")

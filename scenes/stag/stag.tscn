@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bantlerstag001"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/stag.gd" id="1_stag"]
+[ext_resource type="Script" path="res://scripts/gameplay/stag_visual.gd" id="2_visual"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 14.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_stag"]
+friction = 0.6
+bounce = 0.3
+
+[node name="Stag" type="RigidBody2D" groups=["bodies"]]
+mass = 1.2
+physics_material_override = SubResource("PhysicsMaterial_stag")
+gravity_scale = 0.95
+linear_damp = 0.04
+angular_damp = 3.0
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 8
+script = ExtResource("1_stag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_body")
+
+[node name="Visual" type="Node2D" parent="."]
+script = ExtResource("2_visual")
